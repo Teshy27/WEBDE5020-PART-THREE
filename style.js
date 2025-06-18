@@ -1,6 +1,9 @@
-// Pop-up greeting using alert
-alert(""Hello,{name},Welcome to the Infinity Gold.");
-// Optionally reset the form
-form.reset();
-nameInput.focus();
-});
+function validateForm(){
+    let x=
+    document.forms["myForm"]
+    ["fname"].value;
+    if(x==""){
+        alert("Name must be filled out");
+        return false;
+    }
+}

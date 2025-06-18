@@ -84,24 +84,24 @@ form{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 
 }
-/*Submit*/
+/*Submit BUTTON*/
 button{
-    width: 100%;
+    width: 65%;
     padding: 12px;
     border: none;
     border-radius: 10px;
     background-color: #fffef9;
-    background: linear-gradient(45deg, #6a11cb,#2575fc);
+    background: linear-gradient(135deg, #b8860b, #ffd700);
     color: white;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 6px 16px rgba(97, 52, 255, 0.5);
+    box-shadow: 0 6px 16px rgba(184, 134, 11, 0.4);
 
 
 }
 button:hover{
-    background: linear-gradient(45deg, #2575fc,#6a11cb);
+    background: linear-gradient(45deg,#ffd700,#b8860b);
 }
 .slide-in-right{
     opacity: 0;
