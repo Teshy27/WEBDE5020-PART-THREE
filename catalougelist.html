@@ -6,26 +6,123 @@
     <title>https://infinityGold.co.za</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.js"/>
-</head>
-<body>
+
+    <!-- LUXURY TIME HEADER -->
+ <div class="header-time-bar">
+  <span id="luxTime"></span>
+</div>
+
+    <style>
+        /* ========== SUCCESS POPUP STYLE ========== */
+        .success-popup {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: linear-gradient(135deg, #000000, #222222, #ffd700, #ffec8b);
+          border: 3px solid #FFD700;
+          border-radius: 20px;
+          padding: 40px;
+          width: 90%;
+          max-width: 500px;
+          box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+          color: white;
+          text-align: center;
+          z-index: 9999;
+          animation: fadeInScale 0.6s ease-in-out forwards;
+          display: none;
+          overflow: hidden;
+        }
+    
+        .success-popup h2 {
+          font-size: 32px;
+          font-weight: 800;
+          color: #FFD700;
+          margin-bottom: 15px;
+        }
+    
+        .success-popup p {
+          font-size: 18px;
+          color: #fffacd;
+          margin-bottom: 25px;
+        }
+    
+        .success-popup button {
+          background-color: #FFD700;
+          color: #000;
+          border: none;
+          padding: 12px 25px;
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        .success-popup button:hover {
+          background-color: #ffec8b;
+        }
+    
+        @keyframes fadeInScale {
+          0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.6);
+          }
+          100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+    
+        /* ========== SPARKLE EFFECT ========== */
+        .sparkle {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background: #fffacd;
+          border-radius: 50%;
+          animation: sparkle 1.2s infinite ease-in-out;
+          pointer-events: none;
+        }
+    
+        @keyframes sparkle {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.4);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+        }
+      </style>
+      </head>
+
     <hr size="5" color="black"></hr>
     <hr size="10%" color="white"></hr>
     <CENTER>
-    <H1>O R D E R|| L I S T</H1>
+    <H1>CATALOGUE</H1>
     </CENTER>
     <hr size="10%" color="white"></hr>
     <hr size="5" color="black"></hr>
 </br>
 
-    <nav >
-        <a href="homepage.html">HOME</a>
-        <a href="contactus.html">CONTACT US</a>
-        <A HREF="infopage.html">ABOUT US</A>
-        <a href="loginpage.html">LOGIN</a>
-            <a href="orderpage.html">ORDER</a>
-            <A href="catalougelist.html">ORDER LIST</A>
-            </nav>
+   <!--Navigation bar-->
+<nav ><a href="homepage.html" >HOME</a>
+    <A HREF="infopage.html">ABOUT US</A>
+    <a href="contactus.html">CONTACT US</a>
+    <a href="orderpage.html">SIGN UP</a>
+    <a href="loginpage.html">LOGIN</a>
+        <A href="catalougelist.html">ORDER LIST</A>
+        </nav>
         </br>
+        <script src="style.js">
+
+        </script>
     </br>
     <CENTER>
 
@@ -53,14 +150,110 @@
 <CENTER><img class="product-image" src="pictures/c.jpg" width="40%" height="30%"> </CENTER>
 </br>
 </br>
-</CENTER>
-<center><label>Product Number</label>
+<h2 class="product-title">PRODUCT 5</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
 
-<input type="name and number"/>
-</center>
+<CENTER><img class="product-image" src="pictures/z.jpg" width="40%" height="30%"> </CENTER>
 </br>
 </br>
-<footer>&copy;Infinity Gold. All rights reserved.</footer>
+<h2 class="product-title">PRODUCT 6</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
+
+<CENTER><img class="product-image" src="pictures/w.jpg" width="40%" height="30%"> </CENTER>
+</br>
+</br>
+<h2 class="product-title">PRODUCT 7</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
+
+<CENTER><img class="product-image" src="pictures/x.jpg" width="40%" height="30%"> </CENTER>
+</br>
+</br>
+<h2 class="product-title">PRODUCT 8</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
+
+<CENTER><img class="product-image" src="pictures/q.jpg" width="40%" height="30%"> </CENTER>
+</br>
+</br>
+<h2 class="product-title">PRODUCT 9</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
+
+<CENTER><img class="product-image" src="pictures/f.jpg" width="40%" height="15%"> </CENTER>
+</br>
+</br>
+<h2 class="product-title">PRODUCT 10</h2>
+</br>
+<div class="products-container" class="product-card" tabindex="0"></div>
+
+<CENTER><img class="product-image" src="pictures/y.jpg" width="40%" height="15%"> </CENTER>
+</CENTER>
+</br>
+</br>
+
+
+<!-- ===== FORM ===== -->
+<form onsubmit="event.preventDefault(); showSuccessPopup();">
+  <input type="text" placeholder="Enter Product Number" required style="padding: 12px; width: 300px; font-size: 16px; margin: 40px auto; display: block;" />
+  <CENTER><button type="submit" style="padding: 12px 25px; font-size: 16px;">Submit</button></CENTER>
+</form>
+
+<!-- ===== SUCCESS POPUP ===== -->
+<div class="success-popup" id="successMessage">
+  <h2>🎉 Success!</h2>
+  <p>Your product number has been submitted. I hope you're ready for infinite luxary, baby!</p>
+  <CENTER><button onclick="closeSuccessPopup()">SLAY!! ✨</button></CENTER>
+
+
+</div>
+
+<!-- ===== AUDIO ===== -->
+<audio id="successSound" preload="auto">
+  <source src="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdn.pixabay.com%2Faudio%2F2022%2F03%2F15%2Faudio_9b5b49168a.mp3&data=05%7C02%7CST10488740%40rcconnect.edu.za%7Cff62fa9104344931505b08ddafb78371%7Ce10c8f44f469448fbc0dd781288ff01b%7C0%7C0%7C638859924932687730%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=LIcP2GWEuEXKXXnDDWAzbj5m3LuENPWyruTsUxnhmCc%3D&reserved=0" type="audio/mp3">
+</audio>
+
+<!-- ===== JS ===== -->
+<script>
+  function showSuccessPopup() {
+    const popup = document.getElementById('successMessage');
+    const sound = document.getElementById('successSound');
+
+    // Show popup
+    popup.style.display = 'block';
+
+    // Play sound
+    sound.currentTime = 0;
+    sound.play();
+
+    // Create sparkles
+    for (let i = 0; i < 30; i++) {
+      createSparkle(popup);
+    }
+  }
+
+  function closeSuccessPopup() {
+    const popup = document.getElementById('successMessage');
+    popup.style.display = 'none';
+  }
+
+  function createSparkle(container) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.top = `${Math.random() * 100}%`;
+    sparkle.style.left = `${Math.random() * 100}%`;
+    sparkle.style.animationDuration = `${Math.random() * 1.5 + 0.5}s`;
+    container.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 1500);
+  }
+</script>
+</br>
+</br>
+
+<footer>&copy;Infinity Gold. All rights reserved. 2025</footer>
     
 </body>
 </html>

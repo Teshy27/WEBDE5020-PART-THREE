@@ -9,25 +9,33 @@
     <link rel="stylesheet" href="style.js"/>
 
 </head>
+<!-- LUXURY TIME HEADER -->
+<div class="header-time-bar">
+    <span id="luxTime"></span>
+  </div>
 <body>
     <FONT COLor="white">
     <hr size="5" color="black"></hr>
     <hr size="10" color="white"></hr>
-    <CENTER><h1> O  R  D  E  R</h1></CENTER>
+    <CENTER><h1> SIGN UP</h1></CENTER>
     <hr size="10" color="white"></hr>
     <hr size="5" color="black"></hr>
 </FONT>
 </br>
-<nav ><a href="homepage.html">HOME</a>
-    <a href="contactus.html">CONTACT US</a>
+<!--Navigation bar-->
+<nav ><a href="homepage.html" >HOME</a>
     <A HREF="infopage.html">ABOUT US</A>
+    <a href="contactus.html">CONTACT US</a>
+    <a href="orderpage.html">SIGN UP</a>
     <a href="loginpage.html">LOGIN</a>
-        <a href="orderpage.html">ORDER</a>
         <A href="catalougelist.html">ORDER LIST</A>
         </nav>
     </br>
+    <script src="style.js">
+
+    </script>
     <marquee>
-<center>S I G N -  U P -  T O  - G E T -  S T A R T E D</center>
+<center><h1>SIGN UP TO GET STARTED!</h1></center>
     </marquee>
 </br>
 </br>
@@ -36,18 +44,18 @@
     <div class="input-box">
 
 <label> First Name(s):</label>
-<input type="Name"/>
+<input type="Name" required/>
 </div>
 </br>
 
 <div class="input-box">
 <label> Surname:</label>
-<input type="surname"/>
+<input type="surname" required/>
 </div>
 </br>
 </br>
 </br>
-<div class="input-box">
+<div class="input-box" >
 <label> Gender:</label>
 <input type="checkbox"/>Female
 <input type="checkbox"/>Male 
@@ -57,13 +65,13 @@
 </br>
 <div class="input-box">
 <label>Date Of Birth</label>
-<input type="date"/>
+<input type="date" required/>
 </div>
 </br>
 
 <div class="input-box">
 <label>Contact Details</label>
-<input type="number"/>
+<input type="number" required/>
 </div>
 
 </br>
@@ -71,19 +79,19 @@
 </br>
 <div class="input-box">
 <label>Passport/ID/Visa Number</label>
-<input type="number"/>
+<input type="number" required/>
 </div>
 </br>
 
 <div class="input-box">
 <label>Address</label>
-<input type="address"/>
+<input type="address" required/>
 </div>
 </br>
 
 <div class="input-box">
 <label>Postal Code</label>
-<input type="number"/>
+<input type="number" required/>
 </div>
 
 </br>
@@ -91,13 +99,13 @@
 </br>
 <div class="input-box">
 <label>Email Address</label>
-<input type="email"/>
+<input type="email" required/>
 </div>
 </br>
 
 <div class="input-box">
 <label> Alternative Email Address</label>
-<input type="email"/>
+<input type="email" required/>
 </div>
 
 </br>
@@ -107,19 +115,20 @@
 </center>
 </br>
 <center>
-<a href="catalougelist.html">CLICK HERE TO ORDER</a>
-</br>
+
 </center>
 
 <hr size="2" color="black"></hr>
 <center><label><b>Create New Password</b></label>
-<input type="password"/></center>
+<input type="password" required/></center>
 <center><label><strong b>Re-type New Password</strong></label>
-<input type="password"/></center>
+<input type="password" required/></center>
 </br>
 </bR>
 <CENTER>
-<button>SUBMIT</button>
+    <a href="catalougelist.html">
+<button type="button">SUBMIT</button>
+</a>
 </CENTER>
 </br>
 </bR>
@@ -127,7 +136,7 @@
 Already a member? Log in <a href="loginpage.html">here</a>
 </br>
 </br>
-<footer>&copy;Infinity Gold. All rights reserved.</footer>
+<footer>&copy;Infinity Gold. All rights reserved. 2025</footer>
 </body>
 <header>
 

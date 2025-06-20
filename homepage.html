@@ -2,12 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Vist Infinity_Gold for everlasting luxury."
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>https:\\infinityGold.co.za</title>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="style.js"/>
+    <script defer src="style.js"></script>
+<!--Search Engine Optimised-->
+    <meta property="og:title" content="Luxury Galore"/>
+    <meta property="og:description" content="SEO-optimized site using JavaScript."/>
+    <meta property="og:url" content="https://localhost/preview.jpg"/>
 
+    
+ <!-- LUXURY TIME HEADER -->
+ <div class="header-time-bar">
+    <span id="luxTime"></span>
+  </div>
+
+  <style>
+    /* === FIXED HEADER TIME BAR === */
+    .header-time-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #FFD700;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(255, 215, 0, 0.4);
+      border-bottom: 2px solid gold;
+      z-index: 999;
+    }
+
+    .header-time-bar span {
+      animation: glow 1.5s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 10px gold, 0 0 20px gold;
+      }
+      50% {
+        text-shadow: 0 0 20px #fffacd, 0 0 30px #ffec8b;
+      }
+    }
+
+    /* Push page down so content doesn't sit under fixed header */
+    .page-content {
+      margin-top: 80px;
+      text-align: center;
+    }
+  </style>
 </head>
+
+
+  
 <body color="white">
  <font color="white" face="Times New Roman">
     <!--Horizontal line-->
@@ -16,8 +69,9 @@
 <b><center><h1>I N F I N I T Y || G O L D</h1></center></b>
 <hr size="10%" color="white"></hr>
 <hr size="5" color="black"></hr>
-<header>
 
+<header>
+<p id="dateDisplay"></p>
 </header>
 
  
@@ -28,14 +82,17 @@
 </tr>
 </table>
 </center>
+<script src="style.js">
+
+</script>
 </br>
 </br>
 <!--Navigation bar-->
-<nav ><a href="homepage.html">HOME</a>
-    <a href="contactus.html">CONTACT US</a>
+<nav ><a href="homepage.html" >HOME</a>
     <A HREF="infopage.html">ABOUT US</A>
+    <a href="contactus.html">CONTACT US</a>
+    <a href="orderpage.html">SIGN UP</a>
     <a href="loginpage.html">LOGIN</a>
-        <a href="orderpage.html">ORDER</a>
         <A href="catalougelist.html">ORDER LIST</A>
         </nav>
     </br>
@@ -64,8 +121,33 @@ CLICK <a href="infopage.html">HERE </a>TO LEARN MORE INFO
 </br>
 
     </header>
+    <img src="pictures/logo.png" alt="My Business Logo"/>
+    <script type="application/1d+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Infinity Gold",
+            "image": "pictures/logo.png",
+            "address":{
+                "@type": "PostalAddress",
+                "streetAddress": "38 Shop,Beacon Bay Retail Park",
+                "addressLocality": "East London",
+                "addressRegion": "Eastern Cape",
+                "postalCode": "5200",
+                "addressCountry": "South Africa"
+            },
+            "url": "https://InfinityGold.co.za",
+            "telephone": "+27 65 177 5516 "
+        }
 
-<footer>&copy;Infinity Gold. All rights reserved.</footer>
+    
+    </script>
+    <div class="main-content">
+        <!--scrolling happens here-->
+    </div>
+    
+
+<footer>&copy;Infinity Gold. All rights reserved. 2025</footer>
 </font>
 
 </body>
