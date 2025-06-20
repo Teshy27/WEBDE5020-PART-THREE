@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>https:\\infinityGold.co.za</title>
     <link rel="stylesheet" href="style.css"/>
-    <script defer src="style.js"></script>
+    
 <!--Search Engine Optimised-->
     <meta property="og:title" content="Luxury Galore"/>
     <meta property="og:description" content="SEO-optimized site using JavaScript."/>
@@ -17,46 +17,10 @@
  <div class="header-time-bar">
     <span id="luxTime"></span>
   </div>
-
-  <style>
-    /* === FIXED HEADER TIME BAR === */
-    .header-time-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #000;
-      color: #FFD700;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 15px 0;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 12px rgba(255, 215, 0, 0.4);
-      border-bottom: 2px solid gold;
-      z-index: 999;
-    }
-
-    .header-time-bar span {
-      animation: glow 1.5s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow: 0 0 10px gold, 0 0 20px gold;
-      }
-      50% {
-        text-shadow: 0 0 20px #fffacd, 0 0 30px #ffec8b;
-      }
-    }
-
-    /* Push page down so content doesn't sit under fixed header */
-    .page-content {
-      margin-top: 80px;
-      text-align: center;
-    }
-  </style>
+  <header>
+    <p id="dateDisplay"></p>
+    </header>
+ 
 </head>
 
 
@@ -70,9 +34,7 @@
 <hr size="10%" color="white"></hr>
 <hr size="5" color="black"></hr>
 
-<header>
-<p id="dateDisplay"></p>
-</header>
+
 
  
 </br></br></br>
@@ -82,9 +44,7 @@
 </tr>
 </table>
 </center>
-<script src="style.js">
 
-</script>
 </br>
 </br>
 <!--Navigation bar-->
@@ -149,6 +109,6 @@ CLICK <a href="infopage.html">HERE </a>TO LEARN MORE INFO
 
 <footer>&copy;Infinity Gold. All rights reserved. 2025</footer>
 </font>
-
+<script src="style.js"></script>
 </body>
 </html>

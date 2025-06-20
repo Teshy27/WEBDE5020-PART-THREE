@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
   Element.scroll({behaviour:'smooth'});
 
   //Automatic date
+
   document.addEventListener('DOMContentLoaded', function(){
-    console.log("JavaScript is connected");
+    
     const dateElement = document.getElementById('dateDisplay');
 if(dateElement){
     const today = new Date();
@@ -54,6 +55,61 @@ if(dateElement){
   }
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.close');
   
+    images.forEach(img => {
+      img.addEventListener('hover', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+  
+    closeBtn.addEventListener('hover', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+  
+    lightbox.addEventListener('hover', (e) => {
+      if (e.target !== lightboxImg && e.target !== closeBtn) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  });
+
+//Security casual  protection
+function sanitizeInput(input){
+  return input.replace(/[<>&'"]/g, (c) => ({
+    '<': '&lt;', '>': '&gt;', '&': '&amp;','"': '&quot;', "'": '&#39;'
+  })[c]);
+}
+  //Enquiry form
+  document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const status = document.getElementById('formStatus');
+  
+    if (!name || !email || !message) {
+      status.textContent = "Please fill in all required fields.";
+      status.style.color = "crimson";
+      return;
+    }
+  
+    // Placeholder for success (you'd send data to a backend here)
+    status.textContent = "Thanks! Your enquiry has been sent ✨";
+    status.style.color = "lightgreen";
+  
+    // Reset the form (optional)
+    this.reset();
+  });
 
   
